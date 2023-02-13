@@ -10,4 +10,12 @@ public class WinSet {// маленький класс-массив, нужен �
     {
         index = i;
     }
+    String getdate(){
+       return  this.date;
+    }
+
+    int getindex()
+    {
+        return this.index;
+    }
 }
