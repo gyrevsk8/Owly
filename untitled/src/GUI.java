@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.geom.RoundRectangle2D;
 
@@ -12,28 +13,43 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
                 this.setBounds(960,240,400,600);
               //  this.setShape(new RoundRectangle2D.Double(0,0,this.getWidth(),this.getHeight(),20,20) );
               JTable jTable = new JTable(3,6);
+              jTable.addMouseListener(new MouseListener() {
+                  @Override
+                  public void mouseClicked(MouseEvent e) {
 
-                jTable.addMouseMotionListener(new MouseMotionListener() {
-                        @Override
-                        public void mouseDragged(MouseEvent e) {
-                               getRootPane().setBackground(Color.blue);
-                               getRootPane().revalidate();
-                                jTable.setBackground(Color.blue);
-                                jTable.revalidate();
-                                jTable.setOpaque(true);
+                  }
 
-                        }
+                  @Override
+                  public void mousePressed(MouseEvent e) {
 
-                        @Override
-                        public void mouseMoved(MouseEvent e) {
-                               getRootPane().setBackground(Color.GREEN);
-                                jTable.setBackground(Color.green);
-                               getRootPane().revalidate();
-                            jTable.revalidate();
-                            jTable.setOpaque(true);
+                  }
 
-                        }
-                });
+                  @Override
+                  public void mouseReleased(MouseEvent e) {
+
+                  }
+
+                  @Override
+                  public void mouseEntered(MouseEvent e) {
+                      getRootPane().setBackground(Color.GREEN);
+                      jTable.setBackground(Color.green);
+                      getRootPane().revalidate();
+                      jTable.revalidate();
+                      jTable.setOpaque(true);
+
+                  }
+
+                  @Override
+                  public void mouseExited(MouseEvent e) {
+                      getRootPane().setBackground(Color.blue);
+                      getRootPane().revalidate();
+                      jTable.setBackground(Color.white);
+                      jTable.revalidate();
+                      jTable.setOpaque(true);
+                  }
+              });
+
+
                 Box container = new Box(BoxLayout.Y_AXIS);
 
                 jTable.editCellAt(1,1);
