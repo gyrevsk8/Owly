@@ -63,7 +63,7 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
                 jTable.setIntercellSpacing(new Dimension(10, 10));
                 jTable.setGridColor(Color.blue);
                 boks.setMaximumSize(new Dimension(300,300));
-                boks.setLayout(new BorderLayout());\
+                boks.setLayout(new BorderLayout());
                 JScrollPane jScrollPane = new JScrollPane();
                  boks.add(new JScrollPane(jTable));
                   jScrollPane.add(boks);
