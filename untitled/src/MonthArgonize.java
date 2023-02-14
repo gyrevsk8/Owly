@@ -1,13 +1,14 @@
 
 public class MonthArgonize {
+    String[] months;
+
+    {
+        months = new String[12];
+
+    }
 
     MonthArgonize() {
-        String[] months;
 
-        {
-            months = new String[12];
-
-        }
         months[0] = "январь";
         months[1] = "февраль";
         months[2] = "март";
@@ -23,5 +24,8 @@ public class MonthArgonize {
 
 
     }
-
+ String[] monthsr()
+    {
+        return months;
+    }
 }
