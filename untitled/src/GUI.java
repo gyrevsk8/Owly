@@ -13,6 +13,7 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
                 this.setBounds(960,240,400,600);
               //  this.setShape(new RoundRectangle2D.Double(0,0,this.getWidth(),this.getHeight(),20,20) );
               JTable jTable = new JTable(3,6);
+            Container boks = new Container();
               jTable.addMouseListener(new MouseListener() {
                   @Override
                   public void mouseClicked(MouseEvent e) {
@@ -31,18 +32,22 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
                   @Override
                   public void mouseEntered(MouseEvent e) {
-                      getRootPane().setBackground(Color.GREEN);
+
                       jTable.setBackground(Color.green);
-                      getRootPane().revalidate();
+                      boks.setBackground(Color.red);
                       jTable.revalidate();
                       jTable.setOpaque(true);
+                      getRootPane().setBackground(Color.GREEN);
+                      getContentPane().setBackground(Color.GREEN);
+                      getContentPane().revalidate();
+                      getRootPane().revalidate();
+                      getRootPane().getGraphics().setColor(Color.GREEN);
 
                   }
 
                   @Override
                   public void mouseExited(MouseEvent e) {
-                      getRootPane().setBackground(Color.blue);
-                      getRootPane().revalidate();
+                      boks.setBackground(Color.white);
                       jTable.setBackground(Color.white);
                       jTable.revalidate();
                       jTable.setOpaque(true);
@@ -57,9 +62,15 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
                 jTable.setRowHeight(1, 20);
                 jTable.setIntercellSpacing(new Dimension(10, 10));
                 jTable.setGridColor(Color.blue);
-
-                container.add(new JScrollPane(jTable));
-                setContentPane(container);
+                boks.setMaximumSize(new Dimension(300,300));
+                boks.setLayout(new BorderLayout());\
+                JScrollPane jScrollPane = new JScrollPane();
+                 boks.add(new JScrollPane(jTable));
+                  jScrollPane.add(boks);
+                JLabel jlabel = new JLabel("NNNNN");
+                jScrollPane.add(jlabel);
+                container.add(jScrollPane);
+                setContentPane(boks);
 
 
 
