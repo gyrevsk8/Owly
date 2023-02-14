@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.JTableHeader;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -62,6 +63,9 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
                 jTable.setRowHeight(1, 20);
                 jTable.setIntercellSpacing(new Dimension(10, 10));
                 jTable.setGridColor(Color.blue);
+                jTable.setRowHeight(35);
+
+                jTable.setTableHeader();
                 boks.setMaximumSize(new Dimension(300,300));
                 boks.setLayout(new BorderLayout());
                 JScrollPane jScrollPane = new JScrollPane();
@@ -76,5 +80,3 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
         }
 
-
-        }

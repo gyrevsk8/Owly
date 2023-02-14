@@ -8,6 +8,7 @@ public class Master implements Runnable {//стандартный класс-п�
         win.setindex(0);
         GUI gui = new GUI(win);
         gui.show();
+        MonthArgonize monthArgonize;
     }
     public void run()
     {
