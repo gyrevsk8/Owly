@@ -28,4 +28,8 @@ public class MonthArgonize {
     {
         return months;
     }
+    String getmonth(int index)
+    {
+        return months[index];
+    }
 }
