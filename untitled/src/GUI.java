@@ -16,9 +16,11 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
         super(win.getdate());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setBounds(960, 240, 400, 600);
+        MonthArgonize monthArgonize = new MonthArgonize();
         //  this.setShape(new RoundRectangle2D.Double(0,0,this.getWidth(),this.getHeight(),20,20) );
         Vector v = new Vector<>();
         TableModel tableModel = new TableModel() {
+
             @Override
             public int getRowCount() {
                 return 1;
@@ -49,17 +51,17 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
             @Override
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return false;
+                return true;
             }
 
             @Override
             public Object getValueAt(int rowIndex, int columnIndex) {
-                return 0;
+                return monthArgonize.getdata(columnIndex);
             }
 
             @Override
             public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-
+                    monthArgonize.setData(columnIndex,aValue.toString());
             }
 
             @Override

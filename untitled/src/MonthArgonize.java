@@ -5,7 +5,9 @@ public class MonthArgonize {
     {
         months = new String[12];
 
+
     }
+    String [][] data = new String[4][2];
 
     MonthArgonize() {
 
@@ -22,6 +24,10 @@ public class MonthArgonize {
         months[10] = "ноябрь";
         months[11] = "декабрь";
 
+        data [0][0] = "check"; data[0][1]="check";
+        data [1][0] = "check1";data [1][1] = "check1";
+        data [2][0] = "check2";data [2][1] = "check2";
+        data [3][0] = "check3";data [3][1] = "check3";
 
     }
  String[] monthsr()
@@ -31,5 +37,13 @@ public class MonthArgonize {
     String getmonth(int index)
     {
         return months[index];
+    }
+    String getdata(int index)
+    {
+        return data[index][0];
+    }
+    void setData(int index, String inf)
+    {
+        data[index][0]=inf;
     }
 }
