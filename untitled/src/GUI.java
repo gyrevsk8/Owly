@@ -23,7 +23,7 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
             @Override
             public int getRowCount() {
-                return 1;
+                return 2;
             }
 
             @Override
@@ -56,12 +56,12 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
             @Override
             public Object getValueAt(int rowIndex, int columnIndex) {
-                return monthArgonize.getdata(columnIndex);
+                return monthArgonize.getdata(columnIndex,rowIndex);
             }
 
             @Override
             public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-                    monthArgonize.setData(columnIndex,aValue.toString());
+                    monthArgonize.setData(columnIndex,rowIndex,aValue.toString());
             }
 
             @Override
