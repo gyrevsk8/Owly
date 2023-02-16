@@ -56,12 +56,12 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
             @Override
             public Object getValueAt(int rowIndex, int columnIndex) {
-                return monthArgonize.getdata(columnIndex,rowIndex);
+                return monthArgonize.getdata(rowIndex,columnIndex);
             }
 
             @Override
             public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-                    monthArgonize.setData(columnIndex,rowIndex,aValue.toString());
+                    monthArgonize.setData(rowIndex,columnIndex,aValue.toString());
             }
 
             @Override

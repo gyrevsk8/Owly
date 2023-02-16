@@ -38,11 +38,11 @@ public class MonthArgonize {
     {
         return months[index];
     }
-    String getdata(int index,int indexx)
+    String getdata(int indexx,int index)
     {
         return data[index][indexx];
     }
-    void setData(int index,int indexx, String inf)
+    void setData(int indexx,int index, String inf)
     {
         data[index][indexx]=inf;
     }
