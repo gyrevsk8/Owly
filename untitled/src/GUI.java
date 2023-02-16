@@ -15,7 +15,7 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
     GUI(WinSet win) {
         super(win.getdate());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setBounds(960, 240, 400, 600);
+        this.setBounds(960, 240, 600, 600);
         MonthArgonize monthArgonize = new MonthArgonize();
         //  this.setShape(new RoundRectangle2D.Double(0,0,this.getWidth(),this.getHeight(),20,20) );
         Vector v = new Vector<>();
@@ -28,7 +28,7 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
             @Override
             public int getColumnCount() {
-                return 2;
+                return 3;
             }
 
             @Override
@@ -119,13 +119,13 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
 
 
         Box container = new Box(BoxLayout.Y_AXIS);
-        jTable.editCellAt(1, 1);
+
         jTable.setRowHeight(30);
-        jTable.setRowHeight(1, 20);
+      // jTable.setRowHeight(1, 20);
         jTable.setIntercellSpacing(new Dimension(10, 10));
         jTable.setGridColor(Color.blue);
         jTable.setRowHeight(35);
-        boks.setMaximumSize(new Dimension(300, 300));
+        //boks.setMaximumSize(new Dimension(300, 300));
         boks.setLayout(new BorderLayout());
         JScrollPane jScrollPane = new JScrollPane();
         boks.add(new JScrollPane(jTable));
