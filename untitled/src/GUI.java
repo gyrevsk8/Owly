@@ -18,7 +18,7 @@ public class GUI extends JFrame {//гуи, принимает в себя вин
         this.setBounds(960, 240, 600, 600);
         MonthArgonize monthArgonize = new MonthArgonize();
         //  this.setShape(new RoundRectangle2D.Double(0,0,this.getWidth(),this.getHeight(),20,20) );
-        Vector v = new Vector<>();
+        //// Vector v = new Vector<>();
         TableModel tableModel = new TableModel() {
 
             @Override
